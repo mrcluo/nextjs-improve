@@ -1,11 +1,12 @@
 import { GetStaticProps, GetStaticPaths, NextPage } from "next";
 import { ReactElement } from "react";
+import { NextPageWithLayout } from "@/pages/_app";
 
 type PostProps = {
   content: string;
 };
 
-const Page: NextPage<PostProps> = ({ content }: PostProps) => {
+const Page: NextPageWithLayout<PostProps> = ({ content }: PostProps) => {
   return (
     <div>
       <div>{content}</div>

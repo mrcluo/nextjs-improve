@@ -12,7 +12,7 @@ export default function Backend({ data }: HomeProp) {
   return (
     <div>
       {data.map((item) => (
-        <div>笔记页面 - 后端{item.content}</div>
+        <div key={item.content}>笔记页面 - 后端{item.content}</div>
       ))}
     </div>
   );

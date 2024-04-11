@@ -17,7 +17,7 @@ export default function Backend({ data }: HomeProp) {
   return (
     <div className={style.textred}>
       {data.map((item) => (
-        <div>笔记页面 - 前端{item.content}</div>
+        <div key={item.content}>笔记页面 - 前端{item.content}</div>
       ))}
       <div>
         <button onClick={() => route.push("/note/backend")}>
