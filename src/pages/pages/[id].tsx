@@ -1,4 +1,5 @@
 import { GetStaticProps, GetStaticPaths, NextPage } from "next";
+import { ReactElement } from "react";
 
 type PostProps = {
   content: string;
@@ -22,6 +23,15 @@ const Page: NextPage<PostProps> = ({ content }: PostProps) => {
 };
 
 Page.displayName = "PostPage";
+Page.getLayout = (page: ReactElement) => {
+  return (
+    <div>
+      <div>header from post</div>
+      {page}
+      <div>footer from post</div>
+    </div>
+  );
+};
 
 export default Page;
 
