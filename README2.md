@@ -54,3 +54,8 @@ import style from "./xx.module.css";
   - onClink={()=> rouer.push('/xxx')}  useRouter  单页面, 局部刷新
 - API路由(接口)
   - 和页面路径的index路由类似,  pages/api/article.ts   就有一个接口 /api/article
+
+##　布局
+ - 全局组件加头尾
+_app.tsx中
+ - 个别组件自定义头尾 /pages/pages/[id].tsx
