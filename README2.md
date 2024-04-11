@@ -18,4 +18,5 @@ getStaticProps revalidate: 30 // 秒  更新的是node中间层返回页面里�
 
 ## 运行
 npm run dev 开发环境构建启动页面: 这个测试SSR SSG的效果等于手动更新了, 因为每次刷新会重新构建
+
 npm run start 启动build的页面: 测试SSR SSG的效果一定要npm run start运动build包 模拟上服务器后的页面渲染的效果
