@@ -26,6 +26,7 @@ Page.displayName = "PostPage";
 export default Page;
 
 // 加getStaticPaths 是为了告诉SSG有几篇静态文章要生成.  SSR不用, 因为它每次都重新生成
+// paths:  posts.map(i => ({ params: { id: i.id.toString() } })),
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: [
@@ -38,6 +39,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
+  // ssg 页面不可获取context.query
+  // console.log("🚀 ~ = ~ context:", context.query);
   if (context.params?.id) {
     const postID = +context.params?.id;
     const fs = await import("fs/promises");

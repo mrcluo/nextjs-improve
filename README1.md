@@ -83,3 +83,11 @@ npx create-next-app@latest --typescript
 ```js
 npx create-react-app my-react-app
 ```
+
+## 项目结构
+ - public: 静态资源
+ - pages: 核心组件包
+ - style: 全局css 局部css
+ - api: 接口
+ - examples: 跟第三方库集成(redux electron等) 参考react的源码
+ - document文件: 会更改html模板 常用来seo时 header加meta标签
